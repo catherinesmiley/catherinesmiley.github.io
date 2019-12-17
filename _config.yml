@@ -1,11 +1,11 @@
 # Site settings
 author: Catherine Smiley
-title: 
+title: Boot Camp Journey
 header-img: img/home-bg.png
 email: catherinesmiley@gmail.com
 copyright_name: Catherine Smiley
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Flatiron School Software Engineering Boot Camp
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  catherinesmiley
