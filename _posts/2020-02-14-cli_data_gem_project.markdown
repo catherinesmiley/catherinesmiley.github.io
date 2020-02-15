@@ -14,7 +14,7 @@ The program, when run, first creates a new instance of the Controller class and 
 
 The #run method of the Controller class contains three instance methods within the Controller class: 
 
-1. #create_books,  sets a local variable, book_array, equal to the .scrape_fiction_giveaway method of the Scraper class. It then passes that array as an argument to the .create_from_site method within the Book class, which iterates through that array and instantiates a new Book instance for each book element and uses metaprogramming, through the #initialize method, to assign the key/value pairs from that array of hashes as attributes of each new book instance, and stores each new book instance in the @@all class variable of the Book class. 
+1. #create_books  sets a local variable, book_array, equal to the .scrape_fiction_giveaway method of the Scraper class. It then passes that array as an argument to the .create_from_site method within the Book class, which iterates through that array and instantiates a new Book instance for each book element and uses metaprogramming, through the #initialize method, to assign the key/value pairs from that array of hashes as attributes of each new book instance, and stores each new book instance in the @@all class variable of the Book class. 
 2. #welcome prints out two lines of welcoming text to the user using two puts methods
 3. #get_input gets user input and uses if, elsif, and else statements to trigger individual methods and print out instructional lines of text depending on the user's input.
 
