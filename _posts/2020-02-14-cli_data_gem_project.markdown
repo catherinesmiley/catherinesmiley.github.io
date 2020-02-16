@@ -12,7 +12,7 @@ Living in NYC, the land where everything costs 5 times more than it should, for 
 
 This CLI program allows the user to pull up the list of recently added Fiction Giveaways on Goodreads and to learn more details of the giveaway and the book itself.
 
-My CLI program consists of three classes - Scraper, Controller, and Book. There is one scraping method in the Scraper class, .scrape_fiction_giveaway, which scrapes the Fiction Giveaways page (https://www.goodreads.com/giveaway/genre/Fiction?name=Fiction&sort=recently_listed&tab=recently_listed) using the Nokogiri and Open URI gems. Details about each book and its giveaway (title, author, release_date, and giveaway_details) are scraped from the page and saved in a hash within the array of Books that is the return value of the .scrape_fiction_giveaway method. 
+My CLI program consists of three classes - Scraper, Controller, and Book. There is one scraping method in the Scraper class, .scrape_fiction_giveaway, which scrapes the Fiction Giveaways page (https://www.goodreads.com/giveaway/genre/Fiction?name=Fiction&sort=recently_listed&tab=recently_listed) using the Nokogiri and Open URI gems. The title, author, release date, and giveaway details for each book are scraped from the page and saved as key/values pairs in a hash within the array of Books that is the return value of the .scrape_fiction_giveaway method. 
 
 The program, when run, first creates a new instance of the Controller class and runs the #run method on that new instance. 
 
