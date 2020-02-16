@@ -6,9 +6,13 @@ permalink:  cli_data_gem_project
 ---
 
 
-Living in NYC, the land where everything costs 5 times more than it should, for the past 10 years has turned me into someone who relentlessly looks for the best deal at all times. I'm also a huge book nerd, which can become an expensive hobby if you're not a dedicated deal-seeker. There are cheap options for books, such as thrift store purchases and a subscription to BookBub's daily newsletter that lists e-books that are currently $5.99 or less, and there are free options, which include a library card and entering giveaways just in case you have a lucky moment and win. To keep tabs on the most recent giveaways on Goodreads, I scraped their Fiction Giveaways page for my CLI Data Gem Project. This CLI program allows the user to pull up the list of recently added Fiction Giveaways on Goodreads and to learn more details of the giveaway and the book itself.
+Living in NYC, the land where everything costs 5 times more than it should, for the past 10 years has turned me into someone who relentlessly looks for the best deal at all times. I'm also a huge book nerd, which can become an expensive hobby if you're not a dedicated deal-seeker. There are cheap options for books, such as thrift store purchases and a subscription to BookBub's daily newsletter that lists e-books that are currently $5.99 or less, and there are free options, which include a library card and entering giveaways just in case you have a lucky moment and win. To keep tabs on the most recent giveaways on Goodreads, I scraped their Fiction Giveaways page for my CLI Data Gem Project. 
 
-My CLI program consists of three classes - Scraper, Controller, and Book. There is one scraping method in the Scraper class, .scrape_fiction_giveaway, which scrapes the Fiction Giveaways page (https://www.goodreads.com/giveaway/genre/Fiction?name=Fiction&sort=recently_listed&tab=recently_listed) using the Nokogiri and Open URI gems. Each attr_accessor in the Book class (title, author, release_date, and giveaway_details) is saved, along with the accompanying value for each Book whose information is being scraped, in a hash within the array of Books that is the return value of the .scrape_fiction_giveaway method. 
+
+
+This CLI program allows the user to pull up the list of recently added Fiction Giveaways on Goodreads and to learn more details of the giveaway and the book itself.
+
+My CLI program consists of three classes - Scraper, Controller, and Book. There is one scraping method in the Scraper class, .scrape_fiction_giveaway, which scrapes the Fiction Giveaways page (https://www.goodreads.com/giveaway/genre/Fiction?name=Fiction&sort=recently_listed&tab=recently_listed) using the Nokogiri and Open URI gems. Details about each book and its giveaway (title, author, release_date, and giveaway_details) are saved in a hash within the array of Books that is the return value of the .scrape_fiction_giveaway method. 
 
 The program, when run, first creates a new instance of the Controller class and runs the #run method on that new instance. 
 
