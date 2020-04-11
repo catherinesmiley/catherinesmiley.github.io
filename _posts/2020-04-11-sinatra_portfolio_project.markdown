@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Sinatra Portfolio Project"
-date:       2020-04-11 18:01:42 +0000
+date:       2020-04-11 14:01:43 -0400
 permalink:  sinatra_portfolio_project
 ---
 
@@ -53,12 +53,12 @@ Once the user submits the form, it's sent to the /restaurants post route. In thi
 ```
  post '/restaurants' do 
         restaurant = Restaurant.create(params[:restaurant])
-        **menu_items = params[:menu_items]
+        menu_items = params[:menu_items]
         menu_items.each do |item|
             menu_item = MenuItem.create(item)
             menu_item.restaurant = restaurant
             menu_item.save
-        end **
+        end
         user = Helpers.current_user(session)
         restaurant.user = user 
         restaurant.save 
