@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "Partials in Rails"
-date:       2020-06-19 12:30:26 +0000
+date:       2020-06-19 08:30:27 -0400
 permalink:  partials_in_rails
 ---
 
 
-From the very early days of our boot camp we've learned to keep our code DRY (Don't Repeat Yourself). A few ways to do this are controller helper methods, model helper methods, and my favorite - partials! 
+From the very early days of our boot camp we've learned to keep our code DRY (Don't Repeat Yourself). A few ways to do this include controller helper methods, model helper methods, and my favorite - partials! 
 
 Partials are files saved in our view folders that contain a block of HTML that is used in multiple view files. For example, the form code in an app's new and edit views are typically exactly the same. The only differences between the two are the form's method and action, and thankfully Rails is magical enough to set those up for us (as long as we've defined the necessary object as an instance variable in the controller action that renders the view). Therefore, creating a partial allows you to insert several lines of code into a view using just one line. 
 
@@ -27,7 +27,7 @@ Renders all of this code, found in my playlists form partial (playlists/_form.ht
 <% end %>
 ```
 
-In order for a partial to work properly across various views is through the use of locals:  
+In order for a partial to work properly across various views, we use locals:  
 
 `locals: {playlist: @playlist}`
 
