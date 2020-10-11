@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "React-Redux Final Project"
-date:       2020-10-11 14:50:35 +0000
+date:       2020-10-11 10:50:35 -0400
 permalink:  react-redux_final_project
 ---
 
@@ -10,7 +10,7 @@ One of my favorite things in the world is camping. I don't consider myself an ou
 
 For this project I used the React library with ES6 JavaScript as well as the Redux and Redux-Thunk middleware to handle state change and to use fetch asynchronous actions to communicate with the server. I created `category` and `item` models and associated them with a `has_many` and `belongs_to` relationship (a category has many items and an item belongs to a category). 
 
-Similar to the previous project built in vanilla JavaScript, I utilized fetch requests to send data to and receive data from the server. Since I utilized Redux and Redux-Thunk middleware in this project, though, these fetch requests look a little different. Redux follows the core flow of Action -> Reducer -> Updated State. Redux-Thunk allows actions creators to return a function whereas they typically expect just an object. In this way, we can create a fetch request as an action that receives `dispatch` as an argument, and we can then dispatch an action after the fetch request has resolved:
+Similar to the previous project built in vanilla JavaScript, I utilized fetch requests to send data to and receive data from the server. Since I utilized Redux and Redux-Thunk middleware in this project, though, these fetch requests look a little different. Redux follows the core flow of Action -> Reducer -> Updated State. Redux-Thunk allows actions creators to return a function whereas they typically expect just an object. In this way, we can create a fetch request as an action whose `return` statement receives `dispatch` as an argument, and we can then dispatch an action after the fetch request has resolved:
 
 
 ```
