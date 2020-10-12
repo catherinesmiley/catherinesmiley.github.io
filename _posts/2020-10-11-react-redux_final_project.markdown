@@ -12,7 +12,7 @@ I created a checklist library app with pre-made checklists for users to be able 
 
 To create this app I first created a Ruby on Rails API to serve as the back end. For the front end, I used the React library with ES6 JavaScript.  I also added Redux and Redux-Thunk middleware to handle state change and to use fetch  actions to communicate with the server. I created `category` and `item` models and associated them with a `has_many` and `belongs_to` relationship (a category has many items and an item belongs to a category). 
 
-Similar to the previous project built in vanilla JavaScript, I utilized fetch requests to send data to and receive data from the server. Since I installed Redux and Redux-Thunk middleware in this project, though, these fetch requests look a little different. Redux follows the core flow of Action -> Reducer -> Updated State. Redux-Thunk allows actions creators to return a function whereas they typically expect just an object. In this way, we can create a fetch request as an action whose `return` statement receives `dispatch` as an argument, and we can then dispatch an action after the fetch request has resolved:
+Similar to the previous project built in vanilla JavaScript, I utilized fetch requests to send data to and receive data from the server - namely, to retrieve all of the checklist categories that have been created so that users can access them. Since I installed Redux and Redux-Thunk middleware in this project, though, these fetch requests look a little different. Redux follows the core flow of Action -> Reducer -> Updated State. Redux-Thunk allows actions creators to return a function whereas they typically expect just an object. In this way, we can create a fetch request as an action whose `return` statement receives `dispatch` as an argument, and we can then dispatch an action after the fetch request has resolved:
 
 
 ```
@@ -39,4 +39,4 @@ case 'FETCH_CATEGORIES':
             }
 ```
 
-Here, we're returning an object that includes the current state through use of the spread operator, sets the categories state attribute to the value of `action.categories` (which includes the data returned from our fetch request that we set to the key of categories), and sets the loading state attribute to false. Now, our state includes all categories that we fetched from our Rails API, and we can utilize these categories throughout our app!
+Here, we're returning an object that includes the current state through use of the spread operator, sets the categories state attribute to the value of `action.categories` (which includes the data returned from our fetch request that we set to the key of categories), and sets the loading state attribute to false. Now, our state includes all categories that we fetched from our Rails API, and we can utilize these checklist categories throughout our app!
