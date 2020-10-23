@@ -16,4 +16,4 @@ We didn't stick to our weekly schedule. There were some weeks where we didn't me
 
 Don't be afraid to reach out to other people if you're learning how to code and you feel alone. I've found that the coding community truly wants to help and I can guarantee there is someone else who is feeling the same way that you are. And when you find your person or people, stick with them.
 
-Thank you Lucy and Makai! It's been a long, stressful, terrifying, and rewarding 10 months going through this boot camp together. I'm so grateful for you both and so excited to graduate together!
+Thank you Lucy and Makai! It's been a long, stressful, and rewarding 10 months going through this boot camp together. I'm so grateful for you both and so excited to graduate together!
